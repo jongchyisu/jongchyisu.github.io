@@ -1,0 +1,231 @@
+% thanks to http://texblog.org/2012/04/25/writing-a-cv-in-latex/
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.7in]{geometry}
+\addtolength{\voffset}{.50in}
+\setlength{\textheight}{9.0in} 
+\usepackage{tikz}
+
+%\usepackage{showframe} % Debug margins
+\usepackage{graphicx}
+\usepackage{amssymb}
+
+\usepackage{enumitem}
+\setlist{nosep}
+
+\usepackage{longtable}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+% \usepackage%[math]{kurier} % nicer fonts
+\usepackage[lowtilde]{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks,urlcolor=blue}
+\usepackage[T1]{fontenc}
+
+\usepackage{microtype}
+\usepackage[us,12hr]{datetime}
+\setlength\parindent{0pt}
+\usepackage{array, xcolor}
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.12\textwidth}}
+\newcolumntype{R}{p{0.85\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+
+
+\usepackage{datetime}
+
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{minipage}{0.60\textwidth}
+\vspace{-20pt}
+  \flushleft
+{\bfseries\Huge Jong-Chyi Su}
+\vspace{-0.8em}
+\end{minipage}
+\hfill
+\begin{minipage}[ht]{0.38\textwidth}
+\vspace{-5pt}
+\flushright{
++1 (224) 337-9278\\
+\url{jcsu@cs.umass.edu}\\
+\url{http://people.cs.umass.edu/~jcsu}\\
+Last updated: \today
+}
+\end{minipage}
+\vspace{-0pt}
+\section*{Research Interests}\vspace{-5pt}
+\hrule \vspace{10pt}
+\textbf{Computer Vision, Image Recognition, Machine Learning, Domain Adaptation}
+%\vspace{-12pt}
+
+\section*{Education}\vspace{-5pt}
+\hrule \vspace{10pt}
+\textbf{Ph.D. Student}, Computer Science, University of Massachusetts, Amherst \hfill Sep. 2015 - Present\vspace{2pt}\\
+%Advisor: Subhransu Maji\\
+\textbf{M.S.}, Computer Science, University of California, San Diego \hfill Sep. 2013 - Jun. 2015\vspace{2pt}\\
+\textbf{B.S.}, Electrical Engineering, National Taiwan University \hfill Sep. 2008 - Jun. 2012
+%\vspace{-12pt}
+
+\setlength\parindent{14pt}
+\section*{Publications} \vspace{-5pt}
+
+\hrule \vspace{10pt}
+$[1]$ {\bf Reasoning about Fine-grained Attribute Phrases using Reference Games}\\
+\indent Jong-Chyi Su*, Chenyun Wu*, Huaizu Jiang, Subhransu Maji \\
+\indent {\it International Conference on Computer Vision (ICCV), 2017}
+
+\vspace{8pt}
+\noindent $[2]$ {\bf Adapting Models to Signal Degradation using Distillation}\\
+\indent Jong-Chyi Su, Subhransu Maji \\
+\indent {\it British Machine Vision Conference (BMVC), 2017}
+
+\vspace{8pt}
+\noindent $[3]$ {\bf Depth Estimation and Specular Removal for Glossy Surfaces Using Point and Line Consistency}
+\indent {\bf with Light-Field Cameras}\\
+\indent Michael Tao, Jong-Chyi Su, Ting-Chun Wang, Jitendra Malik, and Ravi Ramamoorthi \\
+\indent {\it IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI), Volume 38 Issue 6, June 2016}.
+
+%\vspace{8pt}
+%\noindent $[4]$ {\bf Configurable Pixel Shader Workload Reduction Technique for Mobile GPUs}\\
+%\indent Yu-Jung Chen, Jong-Chyi Su, Chia-Ming Chang, Yen-Chang Lu, and Shao-Yi Chien \\
+%\indent {\it IEEE Global Conference on Consumer Electronics, 2012}. Best Student Paper Award.
+%\vspace{-12pt}
+
+\section*{Research Experience} \vspace{-5pt}
+\hrule \vspace{10pt}
+
+{\bf Domain Adaptation through Distillation} \hfill Sep. 2015 - Present \\
+\emph{Dr. Subhransu Maji,} University of Massachusetts, Amherst
+\begin{itemize}
+\item Proposed a technique for training CNNs to enhance recognition accuracy on low-quality data through distillation.
+\item Our result outperformed other domain adaptation methods on various fine-grained recognition datasets.
+\end{itemize}
+\vspace{10pt}
+
+\noindent
+{\bf Depth Estimation for Glossy Surfaces with Light-Field Cameras} \hfill Jul. 2014 - Apr. 2015 \\
+\emph{Dr. Ravi Ramamoorthi,} University of California, San Diego
+\begin{itemize}
+\item Designed a novel algorithm to separate specular and diffuse regions, and estimate the light source color for light-field images gathering from Lytro camera.
+\item Developed a program that removes specular component for glossy surfaces, and improves the result of depth estimation by feeding diffuse-only images into a depth estimation algorithm.
+\end{itemize}
+\vspace{10pt}
+
+%\noindent 
+%{\bf Partial Order Embedding with Triplet Comparisons} \hfill Sep. 2013 - Dec. 2013 \\
+%\emph{Dr. Serge Belongie,} University of California, San Diego
+%\begin{itemize} 
+%\item Designed algorithms to recover the affinity matrix and find the embedding in Euclidean space, given partial order similarity comparisons of triplets.
+%\item Developed a program that utilizes matrix completion methods to reduce the number of samples while achieving the same level of nearest neighbor error.
+%\item {\it Technical report is available on personal website.}
+%\end{itemize}
+%\vspace{10pt}
+
+%\noindent 
+%{\bf Spatial Shading Approximation for Mobile GPUs} \hfill Jul. 2011 - Jun. 2012 \\
+%\emph{Dr. Shao-Yi Chien,} National Taiwan University
+%\begin{itemize}
+%\item Designed and implemented a novel deferred shading algorithm in tile-based rendering architecture, which pre-rendered a texture importance map to determine the subsampling granularity.
+%\item The resulting system can save up to 50\% energy consumption with only 2\% hardware overhead.
+%\item {\it Accepted by IEEE GCCE with Best Student Paper Award.}
+%\end{itemize}
+%\vspace{-12pt}
+					
+\section*{Work Experience} \vspace{-5pt}
+\hrule \vspace{10pt}
+{\bf Applied Scientist Intern}, AWS Deep Learning Team \hfill Jun. 2017 - Aug. 2017
+%\begin{itemize}
+%\item 
+%\end{itemize}
+\vspace{5pt}
+
+\noindent 
+{\bf Research Assistant}, UMass-Amherst \hfill Sep. 2015 - Present
+\begin{itemize}
+\item Worked with Dr. Subhransu Maji on fine-grained recognition, segmentation, and domain adaptation problems using deep learning.
+\end{itemize}
+\vspace{5pt}
+
+\noindent 
+{\bf Research Assistant}, UCSD \hfill Jul. 2014 - Dec. 2014
+\begin{itemize}
+\item Worked with Dr. Ravi Ramamoorthi on depth estimation for glossy surfaces with light-field cameras.
+\end{itemize}
+\vspace{5pt}
+
+\noindent 
+{\bf Research Assistant}, Rady School of Management, UCSD \hfill Mar. 2014 - Apr. 2014
+\begin{itemize}
+\item Worked with Dr. Hyoduk Shin to help solve an optimization problem about the pricing strategy for supply chain.% with information asymmetry.
+\end{itemize}
+\vspace{5pt}
+
+\noindent 
+{\bf System Engineer Intern}, Synaptics, Inc., Taipei \hfill Jul. 2011 - Aug. 2011 
+\begin{itemize}
+\item Designed algorithms to improve the performance of touch panel on mobile phones in noisy environment.
+%\item Analyzed data from touch panel, designed novel algorithms and modified the firmware to improve the performance under noise and large contact area.
+\end{itemize}
+%\vspace{-12pt}
+
+\section*{Teaching Experience} \vspace{-5pt}
+\hrule \vspace{10pt}
+{\bf Teaching Assistant}, UCSD
+\begin{itemize}
+\item CSE 140, Components and Design Techniques for Digital Systems \hfill Spring 2015
+\item CSE 250B, Machine Learning \hfill Winter 2015
+\item CSE 150, Introduction to Artificial Intelligence \hfill Summer 2014
+\item CSE 140, Components and Design Techniques for Digital Systems \hfill Spring 2014
+\end{itemize}
+%\vspace{-12pt}
+
+\section*{Awards} \vspace{-5pt}
+\hrule \vspace{10pt}				
+\begin{itemize}  \itemsep 2pt
+\item MS Research Initiation Awards, CSE Department, UCSD \hfill Jul. 2014 - Sep. 2014
+\item Best Student Paper Award, {\it IEEE Global Conference on Consumer Electronics} \hfill Oct. 2012 
+\end{itemize}
+%\vspace{-12pt}
+
+%\section*{Technical Skills} \vspace{-5pt}
+%\hrule \vspace{10pt}
+%{Programming Languages:} python, \textsc{MATLAB}, C/C++.\\
+%\vspace{-12pt}
+
+%\section*{Relevant Classes} \vspace{-5pt}
+%\hrule \vspace{10pt}
+%At UMass:\\
+%CS 611 Advanced Algorithms\\
+%CS 620 Software Engineering\\
+%%CS 630 Systems\\
+%CS 650 Information Theory\\
+%CS 670 Computer Vision\\
+%CS 685 Probabilistic Graphical Models\\
+%%CS 690N Advanced Natural Language Processing\\
+%At UCSD:\\
+%CSE 202 Algorithm Design and Analysis\\
+%CSE 221 Operating Systems\\
+%CSE 240A Computer Architecture\\
+%CSE 250A AI - Probabilistic Reason \& Learning\\
+%CSE 250B Machine Learning\\
+%CSE 252A Computer Vision I\\
+%CSE 252B Computer Vision II\\
+%CSE 255 Data Mining \& Analytics\\
+%CSE 291 Neural Networks\\
+%ECE 273 Convex Optimization \& Applications\\
+%COGS 260 Seminar on Special Topics - Visual Computing\\
+%At NTU:\\
+%GPU Programming\\
+%Digital Visual Effects\\
+%Digital Image Synthesis\\
+%Computer Graphics\\
+%Computational Photography\\
+%Digital Video Technology\\
+
+
+\end{document}

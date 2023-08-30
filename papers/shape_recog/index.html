@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0050)http://people.cs.umass.edu/~kalo/papers/shapepfcn/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>A Deeper Look at 3D Shape Classifiers</title>
+
+<link media="all" href="style.css" type="text/css" rel="stylesheet">
+<style type="text/css" media="all">
+img {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	/*FLOAT: right;*/
+	PADDING-BOTTOM: 10px;
+	PADDING-TOP: 10px
+}
+#content {
+	MARGIN-LEFT: auto;
+  WIDTH: expression(document.body.clientWidth > 925? "925px": "auto" );
+	MARGIN-RIGHT: auto;
+	TEXT-ALIGN: left;
+	max-width: 925px
+}
+body {
+	TEXT-ALIGN: center
+}
+</style>
+</head>
+<body>
+<div id="content">
+  <h1 align="center">A Deeper Look at 3D Shape Classifiers</h1>
+  <img alt="teaser" src="shape_recog_table.png" width="500" align="right">
+  <br>
+  <br>
+  <br>
+  <h2>People</h2>
+  <ul id="people">
+    <li><a href="http://people.cs.umass.edu/~jcsu/">Jong-Chyi Su</a> </li>
+    <li><a href="http://people.cs.umass.edu/~mgadelha/">Matheus Gadelha</a> </li>
+    <li><a href="http://people.cs.umass.edu/~ruiwang/">Rui Wang</a> </li>
+    <li><a href="http://people.cs.umass.edu/~smaji/">Subhransu Maji</a> </li>
+  </ul>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <h2>Abstract</h2>
+  <p align="justify">We investigate the role of representations and architectures for classifying 3D shapes in terms of their computational efficiency, generalization, and robustness to adversarial transformations. By varying the number of training examples and employing cross-modal transfer learning we study the role of initialization of existing deep architectures for 3D shape classification. Our analysis shows that multiview methods continue to offer the best generalization even without pretraining on large labeled image datasets, and even when trained on simplified inputs such as binary silhouettes. Furthermore, the performance of voxel-based 3D convolutional networks and point-based architectures can be improved via cross-modal transfer from image representations. Finally, we analyze the robustness of 3D shape classifiers to adversarial transformations and present a novel approach for generating adversarial perturbations of a 3D shape for multiview classifiers using a differentiable renderer. We find that point-based networks are more robust to point position perturbations while voxel-based and multiview networks are easily fooled with the addition of imperceptible noise to the input.
+  </p>
+
+  <h2>Publication</h2> 
+  <b>A Deeper Look at 3D Shape Classifiers</b>,
+  <br/>
+  Jong-Chyi Su, Matheus Gahelda, Rui Wang, and Subhransu Maji
+  <br/>
+  <em>Second Workshop on 3D Reconstruction Meets Semantics, ECCV</em>, 2018
+  <br/>
+  <a href="http://people.cs.umass.edu/~jcsu/papers/shape_recog/shape_recog.pdf">pdf</a>,
+  <a href="https://arxiv.org/abs/1809.02560">arXiv</a>,
+  <a href="http://people.cs.umass.edu/~jcsu/papers/shape_recog/shape_recog.bib">bibtex</a>,
+  <a href="http://people.cs.umass.edu/~jcsu/papers/shape_recog/shape_recog_poster.pdf">poster</a>
+  <br/>
+
+  <h2>Dataset and Source Code</h2>
+  <p><a href="http://supermoe.cs.umass.edu/shape_recog/shaded_images.tar.gz">Shaded Images (1GB)</a></p>
+  <p><a href="http://supermoe.cs.umass.edu/shape_recog/depth_images.tar.gz">Depth Images (1.5GB)</a></p>
+  <p><a href="https://github.com/jongchyisu/mvcnn_pytorch">PyTorch code for MVCNN</a></p>
+  <p><a href="http://people.cs.umass.edu/~jcsu/papers/shape_recog/render_shaded_black_bg.blend">Blender script for rendering shaded images</a></p>
+  <p><a href="http://people.cs.umass.edu/~jcsu/papers/shape_recog/render_depth.blend">Blender script for rendering depth images</a></p>
+
+  <h2>Effect of Shape Rendering</h2>
+  <img src="shading_acc.png" width="500">
+
+  <h2>Learning with Few Examples</h2>
+  <div class="row">
+    <div class="column">
+      <img src="class_acc.png" width="400" style="float: left">
+    </div>
+    <div class="column">
+      <img src="instance_acc.png" width="400" style="float: left">
+    </div>
+  </div>
+  <p style="clear: both;">
+
+  <h2>Cross Model Distillation</h2>
+  <div class="row">
+    <div class="column">
+      <img src="distill_instance_voxnet.png" width="400" style="float: left">
+    </div>
+    <div class="column">
+      <img src="distill_instance_pointnet.png" width="400" style="float: left">
+    </div>
+  </div>
+  <p style="clear: both;">
+
+  <h2>Adversarial Examples</h2>
+  <img src="advers_examples.png" width="500">
+
+  <h2>Acknowledgements</h2>
+ We acknowledge support from NSF (#1617917, #1749833) and the MassTech Collaborative grant for funding the UMass GPU cluster.
+  <br>
+  <br>
+  <br>
+  <div id="footer"><a href="http://people.cs.umass.edu/~jcsu/">back to Jong-Chyi's page</a></div>
+</div>
+
+
+</body></html>
